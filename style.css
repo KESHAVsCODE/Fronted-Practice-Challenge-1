@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+}
+
+/* to make view screen size  100%*/
+html,
+body {
+    height: 100%;
+}
+
+/*  restric the overflow of the picture */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* to restrict the scrolling horizontally or vertically*/
+h1,
+p {
+    overflow-wrap: break-word;
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    line-height: 1;
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+}
+
+.perfume {
+    background-color: hsl(30, 38%, 92%);
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.perfume-container {
+    background-color: white;
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin: 1rem;
+}
+.perfume-details {
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+.perfume-label {
+    letter-spacing: 0.25rem;
+    font-size: 12px;  
+}
+.perfume-description {
+    line-height: 1.5;
+}
+.perfume-price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.perfume-current-price{
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: hsl(158, 36%, 37%);
+}
+.perfume-old-price{
+    font-size: 0.8rem;
+}
+.perfume-buy{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    
+    color: white;
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+}
+.perfume-buy:hover, :focus{
+    background-color: hsl(158, 36%, 20%);
+}
+.perfume-buy[data-icon="shoping-cart"]::before{
+    content:"";
+    background-image: url(images/icon-cart.svg);
+    width: 15px;
+    height: 16px;
+}
+@media  (max-width: 600px){
+    .perfume-container{
+        display: grid;
+        grid-template-columns: none;
+        
+    }
+    /* .perfume-img{
+        content: url('images/image-product-mobile.jpg');
+    } */
+}
