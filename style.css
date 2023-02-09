@@ -32,13 +32,12 @@ p{
     font-weight: 500;
 }
 
-.perfume {
+body{
     background-color: hsl(30, 38%, 92%);
-    height: 100%;
     display: grid;
-    place-content: center;
+    justify-items: center;
+    align-items: center; 
 }
-
 .perfume-container {
     background-color: white;
     max-width: 600px;
@@ -101,11 +100,8 @@ p{
 }
 @media  (max-width: 600px){
     .perfume-container{
-        display: grid;
         grid-template-columns: none;
-        
+        max-width: 400px;
     }
-    /* .perfume-img{
-        content: url('images/image-product-mobile.jpg');
-    } */
+    
 }
